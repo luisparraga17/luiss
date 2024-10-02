@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League of Legends</title>
+    <!-- Enlace a Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @keyframes moveText {
+            0% { left: 0; }
+            100% { left: 100%; }
+        }
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(27, 60, 122);
+        }
+        header {
+            background-color: rgb(27, 60, 122);
+            color: rgb(14, 15, 15);
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: rgb(33, 182, 27);
+            color: black;
+        }
+        .carousel {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+        .slides {
+    display: flex;
+    width: 500%; /* Ajustar el ancho para incluir la imagen estática */
+    height: 120%;
+    animation: slide 70s infinite;
+}
+        .slides img {
+            width: 100%;
+            height: 100%;
+        }
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            33% { transform: translateX(-100%); }
+            66% { transform: translateX(-200%); }
+            100% { transform: translateX(0); }
+        }
+        section {
+        background-color: rgba(53, 98, 167, 0.8); /* Fondo azul con transparencia */
+        padding: 20px;
+        text-align: center;
+        border-radius: 15px;
+        border: 4px solid black;
+        margin: 20px;
+        transition: transform 0.3s;
+        background-size: cover;
+        background-position: center;
+    }
+    /* Sección Bienvenidos con fondo */
+    #bienvenidos {
+        background-image: url('https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/ffe8f50201af51a0956875d2aeeb9e662eb0b228-3840x2160.png?auto=format&fit=fill&q=80&w=1100'); /* Imagen de fondo personalizada */
+    }
+    /* Sección Jugabilidad con fondo */
+    #jugab {
+        background-image: url('https://e.rpp-noticias.io/large/2018/11/09/582458_707532.jpg'); /* Imagen de fondo personalizada */
+    }
+    /* Sección Actualizaciones con fondo */
+    #prox {
+        background-image: url('https://prod.assets.earlygamecdn.com/images/Old-Noxus-2.webp?transform=banner2x_webp'); /* Imagen de fondo personalizada */
+    }
+    /* Sección Calculadora con fondo */
+    #calculadora {
+        background-image: url('https://i.pinimg.com/736x/d7/19/db/d719dbb88ac3f697901e9c9ee8e92824.jpg'); /* Imagen de fondo personalizada */
+    }
+    section:hover {
+        transform: scale(1.02);
+    }
+    
+        .bienvenidos, .jugab, .aprox, .calculadora {
+            padding: 20px;
+            text-align: center;
+        }
+        section:hover {
+            transform: scale(1.02);
+        }
+        nav {
+            text-align: center;
+            margin: 0 auto;
+            background-color: #333232;
+            border: 2px solid black;
+        }
+        h1, h2 {
+            color: #fcfafa;
+            text-shadow: 2px 2px 0px #000,
+            -2px -2px 0px #000,
+            -2px 2px 0px #000,
+            2px -2px 0px #000;
+        }
+        #volver {
+            background-color: #4298b3;
+            color: rgb(248, 247, 247);
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+        .video-container {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .content {
+            display: flex;
+            justify-content: center; /* Centra las columnas */
+            padding: 20px;
+        }
+        .text-column, .video-column {
+            background-color: rgb(96, 101, 121);
+            border-radius: 15px;
+            padding: 20px;
+            width: 40%; /* Ajusta el ancho de cada columna */
+            margin: 10px; /* Espacio entre columnas */
+            box-shadow: 0 0 10px #faf8f8;
+        }
+        iframe {
+            width: 495px;
+            height: 320px;
+            text-align: center;
+        }
+        .tit{
+            background-color: rgb(27, 60, 122);
+            color: rgb(14, 15, 15);
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer{
+            background-color: #3562a7;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            border: 4px solid black;
+            margin: 20px;
+            transition: transform 0.3s;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="menu" id="menu">
+        
+        <nav>
+            <a href="#bienvenidos">Bienvenidos a la grieta del invocador</a>
+            <a href="#jugab">Jugabilidad</a>
+            <a href="#prox">Actualizaciones</a>
+            <a href="#calculadora">Calculadora descargable</a>
+            <a href="https://www.whatsapp.com" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" title="TikTok">
+                <i class="fab fa-tiktok"></i> TikTok
+            </a>
+        </nav>
+    </header>
+
+    <!-- Carrusel de imágenes -->
+    <div class="carousel">
+        <div class="slides">
+            <img src="https://www.fragster.de/wp-content/uploads/2023/10/Neuer-LoL-Champion-Hwei-wird-ein-kuenstlerischen-Mid-Laner.png" alt="imagen 1">
+            <img src="https://images.prismic.io/play-vs/6c423286e877921fb6659122b16e1845df833e1f_league-of-legends-hero-splash.jpg?auto=compress,format" alt="imagen 2">
+            <img src="https://es.egamersworld.com/_next/image?url=https%3A%2F%2Fegamersworld.com%2Fuploads%2Fblog%2F1%2F17%2F1719221217625_1719221217626.jpg&w=1920&q=75" alt="imagen 3">
+            <img src="https://cdn.oneesports.gg/cdn-data/2022/07/LeagueOfLegends_Vi_Senna_Yasuo_Volibear_Lulu_Splashart.jpg" alt="imagen 4">
+            <img src="https://i.blogs.es/59dfeb/lol-skins-gratis/1366_2000.jpeg" alt="imagen 5">
+            <img src="https://cdn1.epicgames.com/offer/24b9b5e323bc40eea252a10cdd3b2f10/EGS_LeagueofLegends_RiotGames_S1_2560x1440-80471666c140f790f28dff68d72c384b" alt="imagen 6">
+            <img src="https://cdn1.epicgames.com/offer/24b9b5e323bc40eea252a10cdd3b2f10/EGS_LeagueofLegends_RiotGames_S1_2560x1440-80471666c140f790f28dff68d72c384b" alt="imagen estatica" class="static-image">
+  
+        </div>
+    </div>
+    <titulo id="tit" class="tit">
+    <h1>League of Legends</h1>
+    </titulo>
+    
+
+    <!-- Sección "Bienvenidos a la grieta del invocador" -->
+    <section id="bienvenidos" class="bienvenidos">
+        <h2>Bienvenidos a la grieta del invocador</h2>
+        <div class="content">
+            <div class="text-column">
+                <p>League of Legends (inicialmente League of Legends: Clash of Fates) también conocido como LOL, es un videojuego del juego de género Videojuego multijugador de arena de batalla en línea (MOBA)
+                     y deporte electrónico el cual fue desarrollado por Riot Games. Diseñado para el sistema operativo Microsoft Windows y lanzaron una beta para OS X dejando al poco tiempo el proyecto de lado.. 
+                     El juego se anunció por primera vez el 7 de octubre de 2008 y se lanzó al año, más tarde el 27 de octubre de 2009. El juego estuvo en beta del 10 de abril de 2009 al 26 de octubre de 2009.</p>
+                     <br>
+                <p>En un principio los servidores estaban alojados en la empresa GOA y fue vendida a la empresa china Tencent Holdings Limited.
+                    Originalmente fue diseñado por Steve 'Guinsoo' Feak, quien anteriormente había desarrollado DotA: Allstars, y Steve 'Pendragon' Mescon, quien seria el Director de Relaciones Comunitarias para Riot Games.</p>
+            </div>
+            <div class="video-column">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KpxjwIaW0EM?si=OC4j7DC_3Xghq_q5autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <br>
+                <a id="volver" href="#menu">Menú</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección "Jugabilidad" -->
+    <section id="jugab" class="jugab">
+        <h2>Jugabilidad</h2>
+        <div class="content">
+            <div class="text-column">
+                <p>Los modos de juego de League of Legend son: La Grieta del Invocador, El Abismo de los Lamentos, TFT entre otros. 
+                    Los jugadores compiten en partidas, que duran entre 20 y 60 minutos en promedio. En cada modo de juego, los equipos trabajan juntos para lograr una condición de victoria, 
+                    normalmente destruyendo la estructura central (llamado Nexo) en la base del equipo enemigo después de pasar por alto una línea de estructuras defensivas llamadas Torretas. 
+                    En todos los modos de juego, los jugadores controlan personajes llamados «campeones», elegidos o asignados en cada partida, que tienen un conjunto de habilidades únicas, 
+                    con los cuales jugarán toda la partida hasta su conclusión. Desde mayo de 2019, hay 144 campeones disponibles.</p>
+                    <br>
+                <p>League of Legends tiene lugar en el mundo ficticio de Runaterra. Donde los campeones son una colección de héroes y villanos que tienen una variedad de historias, 
+                    a menudo relacionadas con las luchas políticas de los diversos países del continente principal de Valoran. Además, algunos campeones son extraplanares y provienen de mundos 
+                    diferentes a Runaterra, pero están de visita para sus propios fines. </p>
+            </div>
+            <div class="video-column">
+                <br>
+                <br>
+                <br>
+                <iframe src="https://www.leagueoflegends.com/es-es/how-to-play/" title="Wikipedia sobre Construcción"></iframe>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a id="volver" href="#menu">Menú</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección "Actualizaciones" -->
+    <section id="prox" class="prox">
+        <h2>Actualizaciones</h2>
+        <div class="content">
+            <div class="text-column">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p>Con actualizaciones a campeones y rasgos, nuevos chibis, cambios a los sistemas, nuevos amuletos y la Sartén Dorada, que te permite crear Emblemas de más rasgos, 
+                    ¡la versión 14.18 es enorme! ¡Esta es la versión oficial de Worlds 2024!</p>
+            </div>
+            <div class="video-column">
+                <iframe src="https://docs.google.com/spreadsheets/d/1YUg70BtvbFe1aCMFG7BkQSG0Qwy_JHza7YskyB4LPZo/edit?usp=sharing" title="Google Sheets"></iframe>
+                <br>
+                <br>
+                <a id="volver" href="#menu">Menú</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección "Calculadora descargable" -->
+    <section id="calculadora" class="calculadora">
+        <h2>Calculadora descargable</h2>
+        <div class="content">
+            <div class="text-column">
+                <br>
+                <br>
+                <br>
+                <br>
+                <p>Bienveidos invocadores a la calculadora con tematica de League of Legends, con nuestros diferentes personajes en cada boton,
+                    suma, resta, multiplica, todo lo que nesecites con nuestra calculadora y tambien podras descargarla de forma gratuita!</p>
+                    <br>
+                    <br>
+                    <br>
+
+                     <!-- Aquí se agregamos el GIF -->
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/44df8f49721151.58bd3f39699d2.gif" alt="GIF de League of Legends" style="width: 70%; max-width: 400px; height: auto;">
+        
+            </div>
+            <div class="video-column">
+                <iframe src="file:///C:/Users/59175/Downloads/PARRAGA.html" title="calculadora" style="width: 100%; height: 700px;"></iframe>
+                <br>
+                <br>
+                <a id="volver" href="#menu">Menú</a>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Pie de página -->
+    <footer>
+        <a href="https://www.whatsapp.com" target="_blank" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://www.facebook.com" target="_blank" title="Facebook">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" title="TikTok">
+            <i class="fab fa-tiktok"></i> TikTok
+        </a>
+
+        <p>&copy; 2024 League of Legends. derechos reservados por Luis Parraga Huanca</p>
+    </footer>
+</body>
+</html>
